@@ -1,5 +1,5 @@
 {
-  "name": "dash",
+  "name": "modulus-dash",
   "version": "0.0.0",
   "description": "Utility for testing Modulus add-ons before submitting them to the add-on marketplace.",
   "scripts": {
@@ -11,6 +11,7 @@
     "url": "https://bitbucket.org/modulus/dash"
   },
   "keywords": [
+    "dash",
     "modulus",
     "addon",
     "add-on",

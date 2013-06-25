@@ -43,6 +43,17 @@ describe('cli', function() {
 
       done();
     });
+    
+    it('should call test with correct test type of `manifest`', function(done) {
+      spyOn(dash, 'test');
+      
+      cli.parse(['node', 'test', 'test manifest']);
+      
+      expect(dash.test).wasCalled();
+      expect(dash.test).wasCalledWith('manifest', '');
+      
+      done();
+    });
   });
 
   describe('initialization', function() {
