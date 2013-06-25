@@ -9,9 +9,9 @@ var cli  = require('../lib/cli').cli
 
 describe('cli', function() {
 
-  describe('#test', function() {
+  describe('test types', function() {
 
-    it('`all` should call test with correct test type', function(done) {
+    it('should call test with correct test type of `all`', function(done) {
       spyOn(dash, 'test');
 
       cli.parse(['node', 'test', 'test all']);
@@ -22,7 +22,43 @@ describe('cli', function() {
       done();
     });
 
-    xit('`all` with filename should provide a path', function(done) {
+    it('should call test with correct test type of `provision`', function(done) {
+      spyOn(dash, 'test');
+
+      cli.parse(['node', 'test', 'test provision']);
+
+      expect(dash.test).wasCalled();
+      expect(dash.test).wasCalledWith('provision', '', undefined, 'test');
+
+      done();
+    });
+
+    it('should call test with correct test type of `deprovision`', function(done) {
+      spyOn(dash, 'test');
+
+      cli.parse(['node', 'test', 'test deprovision', 0]);
+
+      expect(dash.test).wasCalled();
+      expect(dash.test).wasCalledWith('deprovision', '', 0, 'test');
+
+      done();
+    });
+  });
+
+  describe('initialization', function() {
+    it('should call init', function(done) {
+      spyOn(dash, 'init');
+
+      cli.parse(['node', 'test', 'init']);
+
+      expect(dash.init).wasCalled();
+
+      done();
+    });
+  });
+
+  describe('options', function() {
+    it('should provide a filename path', function(done) {
       spyOn(dash, 'test');
 
       cli.parse(['node', 'test', '--filename=./path/to/addon-manifest.json', 'test all']);
@@ -34,34 +70,15 @@ describe('cli', function() {
       done();
     });
 
-    it('`provision` should call test with correct test type', function(done) {
+    it('should provide a specific plan', function(done) {
+      cli.filename = '';
       spyOn(dash, 'test');
 
-      cli.parse(['node', 'test', 'test provision']);
+      cli.parse(['node', 'test', '--plan=foo', 'test provision']);
 
       expect(dash.test).wasCalled();
-      expect(dash.test).wasCalledWith('provision', '', undefined);
-
-      done();
-    });
-
-    it('`deprovision` should call with correct test type', function(done) {
-      spyOn(dash, 'test');
-
-      cli.parse(['node', 'test', 'test deprovision', 0]);
-
-      expect(dash.test).wasCalled();
-      expect(dash.test).wasCalledWith('deprovision', '', 0);
-
-      done();
-    });
-
-    it('should call init', function(done) {
-      spyOn(dash, 'init');
-
-      cli.parse(['node', 'test', 'init']);
-
-      expect(dash.init).wasCalled();
+      expect(cli.plan).toEqual('foo');
+      expect(dash.test).wasCalledWith('provision', '', undefined, 'foo');
 
       done();
     });
