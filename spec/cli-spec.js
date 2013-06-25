@@ -14,7 +14,7 @@ describe('cli', function() {
     it('should call test with correct test type of `all`', function(done) {
       spyOn(dash, 'test');
 
-      cli.parse(['node', 'test', 'test all']);
+      cli.parse(['node', 'test', 'test']);
 
       expect(dash.test).wasCalled();
       expect(dash.test).wasCalledWith('all', '');
@@ -72,7 +72,7 @@ describe('cli', function() {
     it('should provide a filename path', function(done) {
       spyOn(dash, 'test');
 
-      cli.parse(['node', 'test', '--filename=./path/to/addon-manifest.json', 'test all']);
+      cli.parse(['node', 'test', '--filename=./path/to/addon-manifest.json', 'test']);
 
       expect(dash.test).wasCalled();
       expect(cli.filename).toEqual('./path/to/addon-manifest.json');
