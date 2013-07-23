@@ -1,4 +1,4 @@
-SRC = ./lib/cli.js ./lib/dash.js ./spec/cli-spec.js ./spec/dash-spec.js
+SRC = ./lib/cli.js ./lib/dash.js ./spec/cli-spec.js
 
 build: lint test
 
