@@ -1,18 +1,18 @@
 {
   "maxerr"        : 50,
 
-  "bitwise"       : false,
+  "bitwise"       : true,
   "camelcase"     : false,
   "curly"         : false,
   "eqeqeq"        : true,
   "forin"         : true,
   "immed"         : false,
   "indent"        : 2,
-  "latedef"       : false,
-  "newcap"        : false,
+  "latedef"       : true,
+  "newcap"        : true,
   "noarg"         : true,
   "noempty"       : true,
-  "nonew"         : false,
+  "nonew"         : true,
   "plusplus"      : false,
   "quotmark"      : true,
 
@@ -24,7 +24,7 @@
   "asi"           : false,
   "boss"          : false,
   "debug"         : false,
-  "eqnull"        : false,
+  "eqnull"        : true,
   "es5"           : false,
   "esnext"        : false,
   "moz"           : false,
@@ -52,9 +52,9 @@
   "globals"       : {
     "afterEach"   : false,
     "beforeEach"  : false,
-    "it"          : false,
     "describe"    : false,
-    "spyOn"       : false,
-    "expect"      : false
+    "expect"      : false,
+    "it"          : false,
+    "spyOn"       : false
   }
 }
