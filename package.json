@@ -1,5 +1,5 @@
 {
-  "name": "modulus-dash",
+  "name": "dia",
   "version": "0.0.0",
   "description": "Utility for testing Modulus add-ons before submitting them to the add-on marketplace.",
   "scripts": {
@@ -8,10 +8,9 @@
   "private": true,
   "repository": {
     "type": "GIT",
-    "url": "https://bitbucket.org/modulus/dash"
+    "url": "https://bitbucket.org/modulus/dia"
   },
   "keywords": [
-    "dash",
     "modulus",
     "addon",
     "add-on",
@@ -29,7 +28,7 @@
   "license": "MIT",
   "preferGlobal": "true",
   "bin": {
-    "dash": "./bin/dash"
+    "dia": "./bin/dia"
   },
   "dependencies": {
     "commander-plus": "0.0.6",

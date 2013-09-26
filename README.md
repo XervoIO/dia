@@ -1,17 +1,17 @@
-Dash
+Dia
 ===
 
 Check your provider API implementation for a Modulus add-on quickly and easily.
 
 ## Installation
 
-Install using `$ [sudo] npm install -g modulus-dash`
+Install using `$ [sudo] npm install -g dia`
 
 ## Testing an add-on
 
-Implement your add-on provider API following the instructions found in the [Modulus codex](https://modulus.io/docs/addons/provider-api) or start with the example add-on project [here](https://github.com.fiveisprime/example-addon). Once your API is implemented, start your server up at the base test URL configured in your manifest and run `$ dash test` with your manifest (either from the working directory that contains the manifest or use the `-f` option).
+Implement your add-on provider API following the instructions found in the [Modulus codex](https://modulus.io/docs/addons/provider-api) or start with the example add-on project [here](https://github.com.fiveisprime/example-addon). Once your API is implemented, start your server up at the base test URL configured in your manifest and run `$ dia test` with your manifest (either from the working directory that contains the manifest or use the `-f` option).
 
-Run all tests for your add-on by running `$ dash test` or test individual endpoints (see below). Use the `-f` option to specify the
+Run all tests for your add-on by running `$ dia test` or test individual endpoints (see below). Use the `-f` option to specify the
 location of the manifest for your add-on; otherwise, the current working directory will be used.
 
 _Note: the provided manifest will be validated for each check_
@@ -20,9 +20,9 @@ Failed checks will provide a description of what is missing or incorrect. Once a
 
 ## Commands and options
 
-Run `$ dash -h` for a complete list of commands and options.
+Run `$ dia -h` for a complete list of commands and options.
 
-    Usage: dash [options] [command]
+    Usage: dia [options] [command]
 
     Commands:
 

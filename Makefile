@@ -1,4 +1,4 @@
-SRC = ./lib/cli.js ./lib/dash.js ./spec/dash-spec.js
+SRC = ./lib/cli.js ./lib/dia.js ./spec/dia-spec.js
 
 test:
 	@./node_modules/.bin/jshint $^
