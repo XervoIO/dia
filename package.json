@@ -1,6 +1,6 @@
 {
   "name": "dia",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Utility for testing Modulus add-ons before submitting them to the add-on marketplace.",
   "scripts": {
     "test": "make test"

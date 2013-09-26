@@ -1,7 +1,8 @@
-//     Dash version 0.0.0
-
-//     (c) 2013 Modulus <support@modulus.io>
+//
+//     Dia
+//     Copyright(c) 2013 Modulus <support@modulus.io>
 //     MIT Licensed
+//
 
 var cli  = require('../lib/cli').cli
   , dia = require('../lib/cli').dia;
