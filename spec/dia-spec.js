@@ -97,7 +97,7 @@ describe('options', function() {
 });
 
 describe('test functions are called', function() {
-  
+
   //
   // Mock #validateManifest to avoid the I/O operation.
   //
@@ -110,7 +110,7 @@ describe('test functions are called', function() {
       return arguments[1](true);
     });
   });
-  
+
   it('should call #validateManifest on `manifest`', function() {
     cli.parse(['node', 'test', 'test manifest']);
 
