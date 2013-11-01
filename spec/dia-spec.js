@@ -5,7 +5,7 @@
 //
 
 var cli  = require('../lib/cli').cli
-  , dia = require('../lib/cli').dia;
+  , dia  = require('../lib/cli').dia;
 
 describe('test types', function() {
   it('should call test with correct test type of `all`', function() {
