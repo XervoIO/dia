@@ -61,6 +61,24 @@ describe('test types', function() {
     expect(dia.test).wasCalled();
     expect(dia.test).wasCalledWith('sso', '', 'id');
   });
+
+  it('should call config get with the correct parameters', function() {
+    spyOn(dia, 'getConfig');
+
+    cli.parse(['node', 'test', 'config get', 'test']);
+
+    expect(dia.getConfig).wasCalled();
+    expect(dia.getConfig).wasCalledWith('test');
+  });
+
+  it('should call config set with the correct parameters', function() {
+    spyOn(dia, 'setConfig');
+
+    cli.parse(['node', 'test', 'config set', 'test', 'value']);
+
+    expect(dia.setConfig).wasCalled();
+    expect(dia.setConfig).wasCalledWith('test', 'value');
+  });
 });
 
 describe('skeleton manifest initialization', function() {
