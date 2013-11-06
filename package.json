@@ -5,7 +5,6 @@
   "scripts": {
     "test": "make test"
   },
-  "private": true,
   "repository": {
     "type": "GIT",
     "url": "https://bitbucket.org/modulus/dia"
