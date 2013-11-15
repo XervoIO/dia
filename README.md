@@ -11,7 +11,7 @@ Install using `$ [sudo] npm install -g dia`
 
 Implement your add-on provider API following the instructions found in the
 [Modulus codex](https://modulus.io/docs/addons/provider-api) or start with the
-example add-on project [here](https://github.com.fiveisprime/example-addon).
+example add-on project [here](https://github.com/fiveisprime/example-addon).
 Once your API is implemented, start your server up at the base test URL
 configured in your manifest and run `$ dia test` with your manifest (either from
 the working directory that contains the manifest or use the `-f` option).
