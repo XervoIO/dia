@@ -1,7 +1,5 @@
-SRC = lib/cli.js lib/dia.js spec/dia-spec.js \
-	lib/user-config.js librarian/index.js librarian/util.js \
-	librarian/http.js
+SRC = $(wildcard lib/*.js) $(wildcard spec/*.js)
 
-test:
+test: $(SRC)
 	@node node_modules/.bin/jshint $^
 	@node node_modules/.bin/jasmine-node spec --verbose
