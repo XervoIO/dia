@@ -1,6 +1,6 @@
 {
   "name": "dia",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Modulus add-on test utility.",
   "scripts": {
     "test": "make test"
@@ -31,13 +31,13 @@
   },
   "dependencies": {
     "commander-plus": "0.0.6",
-    "request": "~2.21.0",
+    "request": "2.34.0",
     "colors": "~0.6.0-1",
     "prompt": "~0.2.9",
-    "underscore": "~1.5.2"
+    "underscore": "1.6.0"
   },
   "devDependencies": {
-    "jasmine-node": "~1.9.1",
-    "jshint": "~2.1.4"
+    "jasmine-node": "1.14.2",
+    "jshint": "2.4.4"
   }
 }
