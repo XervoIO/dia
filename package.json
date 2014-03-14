@@ -1,6 +1,6 @@
 {
   "name": "dia",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Modulus add-on test utility.",
   "scripts": {
     "test": "make test"
