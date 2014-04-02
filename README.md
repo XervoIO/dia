@@ -3,8 +3,6 @@ Dia
 
 Check your provider API implementation for a Modulus add-on quickly and easily.
 
-[![NPM](https://nodei.co/npm/dia.png?compact=true)](https://nodei.co/npm/dia/)
-
 # Usage
 
 Run `$ dia -h` for a complete list of commands and options.

@@ -6,8 +6,8 @@
     "test": "make test"
   },
   "repository": {
-    "type": "GIT",
-    "url": "https://bitbucket.org/modulus/dia"
+    "type": "git",
+    "url": "https://github.com/onmodulus/dia.git"
   },
   "keywords": [
     "modulus",

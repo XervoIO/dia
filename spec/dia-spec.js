@@ -4,8 +4,8 @@
 //     MIT Licensed
 //
 
-var cli  = require('../lib/cli').cli
-  , dia  = require('../lib/cli').dia;
+var cli  = require('../lib/cli').cli;
+var dia  = require('../lib/cli').dia;
 
 describe('test types', function() {
   it('should call test with correct test type of `all`', function() {
@@ -111,60 +111,5 @@ describe('options', function() {
     expect(dia.test).wasCalled();
     expect(cli.plan).toEqual('foo');
     expect(dia.test).wasCalledWith('provision', '', undefined, 'foo');
-  });
-});
-
-describe('test functions are called', function() {
-
-  //
-  // Mock #validateManifest to avoid the I/O operation.
-  //
-  beforeEach(function() {
-    spyOn(dia, 'validateManifest').andCallFake(function() {
-      dia.manifest = {};
-      dia.manifest.api = {};
-      dia.manifest.api.test = {};
-
-      return arguments[1](true);
-    });
-  });
-
-  it('should call #validateManifest on `manifest`', function() {
-    cli.parse(['node', 'test', 'test manifest']);
-
-    // Already spied upon in beforeEach.
-    expect(dia.validateManifest).wasCalled();
-  });
-
-  it('should call #validatePost on `provision`', function() {
-    spyOn(dia, 'validatePost');
-
-    cli.parse(['node', 'test', 'test provision']);
-
-    expect(dia.validatePost).wasCalled();
-  });
-
-  it('should call #validatePut on `planchange`', function() {
-    spyOn(dia, 'validatePut');
-
-    cli.parse(['node', 'test', 'test planchange', 0, 'foo']);
-
-    expect(dia.validatePut).wasCalled();
-  });
-
-  it('should call #validateSso on `sso`', function() {
-    spyOn(dia, 'validateSso');
-
-    cli.parse(['node', 'test', 'test sso', 0]);
-
-    expect(dia.validateSso).wasCalled();
-  });
-
-  it('should call #validateDelete on `deprovision`', function() {
-    spyOn(dia, 'validateDelete');
-
-    cli.parse(['node', 'test', 'test deprovision', 0]);
-
-    expect(dia.validateDelete).wasCalled();
   });
 });
