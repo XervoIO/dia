@@ -1,4 +1,4 @@
-Dia
+Dia [![Build Status](https://travis-ci.org/onmodulus/dia.svg?branch=master)](https://travis-ci.org/onmodulus/dia)
 ===
 
 Check your provider API implementation for a Modulus add-on quickly and easily.
