@@ -1,4 +1,4 @@
-Dia [![Build Status](https://travis-ci.org/onmodulus/dia.svg?branch=master)](https://travis-ci.org/onmodulus/dia)
+Dia [![Build Status](https://travis-ci.org/onmodulus/dia.svg?branch=master)](https://travis-ci.org/onmodulus/dia) [![NPM version](https://badge.fury.io/js/dia.svg)](http://badge.fury.io/js/dia)
 ===
 
 Check your provider API implementation for a Modulus add-on quickly and easily.
