@@ -32,8 +32,8 @@ Run `$ dia -h` for a complete list of commands and options.
 # Testing an add-on
 
 Implement your add-on provider API following the instructions found in the
-[Modulus codex](https://modulus.io/docs/addons/provider-api) or start with the
-example add-on project [here](https://github.com/fiveisprime/example-addon).
+[Modulus codex](https://modulus.io/codex/addons/building-an-addon) or start with
+the example add-on project [here](https://github.com/fiveisprime/example-addon).
 Once your API is implemented, start your server up at the base test URL
 configured in your manifest and run `$ dia test` with your manifest (either from
 the working directory that contains the manifest or use the `-f` option).
